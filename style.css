@@ -2,19 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Protest Guerrilla';
 }
 
 body {
-  background-color:rgb(64, 17, 99);
-  color: white;
+  background-color:rgba(61, 39, 139, 0.877);
+  color: rgba(255, 255, 255, 0.74);
   text-align: center;
 }
 
 .container {
-  background-color: rgb(42, 13, 63);
+  background-color: rgb(18, 3, 73);
   width: 800px;
   margin: 2em auto;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 1em;
 }
 
@@ -28,7 +29,7 @@ button {
   width: 150px;
   text-align: center;
   background-color: rgb(94, 0, 0);
-  color: white;
+  color: yellow;
   margin: 15px;
   border-color: black;
   border-radius: 15px;
@@ -55,32 +56,39 @@ button:active {
 }
 
 .display-player {
-  border: 5px solid green;
   width: 200px;
   height: 200px;
+  background-color: rgba(61, 39, 139, 0.877);
+  border-radius: 10px;
   padding: 1em;
 }
 
 .display-computer {
-  border: 5px solid green;
   width: 200px;
   padding: 1em;
+  background-color: rgba(61, 39, 139, 0.877);
+  border-radius: 10px;
 }
 
 .result {
-  border: 5px solid green;
   width: 300px;
-  padding: 2em;
+  height: 100px;
+  text-align: center;
+  padding: 1em;
   font-size: 1.5em;
   margin: 1em auto;
+  background-color: rgba(61, 39, 139, 0.877);
+  border-radius: 20px;
 }
 
 #player-choice {
   font-size: 100px;
+  color: yellow;
 }
 
 #computer-choice {
   font-size: 100px;
+  color: yellow;
 }
 
 .player-score {
