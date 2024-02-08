@@ -63,7 +63,9 @@ let checkWinner = (humanSelection, computerSelection) => {
   displayScore();
   
   if ( win === 5 || lose === 5) {
-    resetGame();
+    setTimeout( () => {
+      resetGame();
+    }, 1);
   }
 }
 
