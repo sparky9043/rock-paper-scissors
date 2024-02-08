@@ -37,7 +37,7 @@ body {
   height: 200px;
 }
 
-.display-result {
+.result {
   border: 5px solid green;
   width: 300px;
   padding: 1em;

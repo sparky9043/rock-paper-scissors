@@ -6,9 +6,9 @@ const scissorsBtn = document.querySelector('#scissors-btn');
 // Display Divs and text content
 const playerChoice = document.querySelector('#player-choice');
 const computerChoice = document.querySelector('#computer-choice');
-const displayResult = document.querySelector('.display-result');
-const playerScore = document.querySelector('player-score');
-const computerScore = document.querySelector('computer-score');
+const result = document.querySelector('.result');
+const playerScore = document.querySelector('.player-score');
+const computerScore = document.querySelector('.computer-score');
 
 // Variables and arrays
 const choices = ["👊", "✋", "✌️"];
@@ -16,7 +16,6 @@ let humanSelection;
 let computerSelection;
 let win = 0;
 let lose = 0;
-let tie = 0;
 
 // button event listeners
 rockBtn.addEventListener('click', () => {
@@ -47,19 +46,40 @@ const playGame = () => {
   checkWinner(humanSelection, computerSelection);
 }
 
-function checkWinner(humanSelection, computerSelection) {
+let checkWinner = (humanSelection, computerSelection) => {
   if ( humanSelection === computerSelection ) {
-    displayResult.textContent = "It's a tie!";
-    tie++;
+    result.textContent = "It's a tie!";
   } else if (
     ( humanSelection === "👊" && computerSelection === "✌️" ) ||
     ( humanSelection === "✌️" && computerSelection === "✋") ||
     ( humanSelection === "✋" && computerSelection === "👊")
   ) {
-    displayResult.textContent = "Player Wins!";
+    result.textContent = "Player Wins!";
     win++;
   } else {
-    displayResult.textContent = "Computer Wins!";
+    result.textContent = "Computer Wins!";
     lose++;
   }
+  displayScore();
+  
+  if ( win === 5 || lose === 5) {
+    resetGame();
+  }
+}
+
+const displayScore = () => {
+  playerScore.textContent = `Player: ${win}`;
+  computerScore.textContent = `Computer: ${lose}`;
+}
+
+const resetGame = () => {
+  if ( win === 5 ) {
+    alert('You Win! Congratulations!');
+  } else if ( lose === 5 ) {
+    alert('Computer Wins! Game Over!');
+  }
+  win = 0;
+  lose = 0;
+  playerScore.textContent = `Player: ${win}`;
+  computerScore.textContent = `Player: ${lose}`;
 }
