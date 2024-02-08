@@ -46,7 +46,19 @@ const playGame = () => {
 }
 
 function checkWinner(humanSelection, computerSelection) {
+  console.log(humanSelection,computerSelection);
   if ( humanSelection === computerSelection ) {
-    console.log("It's a tie!");
+    tie++;
+    console.log(tie);
+  } else if (
+    ( humanSelection === "rock" && computerSelection === "scissors" ) ||
+    ( humanSelection === "scissors" && computerSelection === "paper") ||
+    ( humanSelection === "paper" && computerSelection === "rock")
+  ) {
+    win++;
+    console.log(win);
+  } else {
+    lose++;
+    console.log(lose);
   }
 }
