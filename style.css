@@ -5,9 +5,17 @@
 }
 
 body {
-  background-color:rgb(18, 18, 121);
+  background-color:rgb(64, 17, 99);
   color: white;
   text-align: center;
+}
+
+.container {
+  background-color: rgb(42, 13, 63);
+  width: 800px;
+  margin: 2em auto;
+  border-radius: 15px;
+  padding: 1em;
 }
 
 .title {
