@@ -84,4 +84,7 @@ const resetGame = () => {
   lose = 0;
   playerScore.textContent = `Player: ${win}`;
   computerScore.textContent = `Player: ${lose}`;
+  playerChoice.textContent = "";
+  computerChoice.textContent = "";
+  result.textContent = "";
 }
