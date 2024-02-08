@@ -5,17 +5,13 @@
 }
 
 body {
-  background-color:rgb(5, 5, 68);
+  background-color:rgb(18, 18, 121);
   color: white;
   text-align: center;
 }
 
 .title {
   padding: 1em;
-}
-
-.container {
-  margin: 0 auto;
 }
 
 button {
