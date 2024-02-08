@@ -53,6 +53,7 @@ button:active {
 .display-player {
   border: 5px solid green;
   width: 200px;
+  height: 200px;
   padding: 1em;
 }
 
@@ -76,4 +77,12 @@ button:active {
 
 #computer-choice {
   font-size: 100px;
+}
+
+.player-score {
+  font-size: 1.5em;
+}
+
+.computer-score {
+  font-size: 1.5em;
 }
