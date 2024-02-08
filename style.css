@@ -14,3 +14,40 @@ body {
   width: 100px;
   height: 100px;
 }
+
+.display-box {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 5em;
+  padding-top: 1em;
+}
+
+.display-player {
+  border: 5px solid green;
+  width: 200px;
+  height: 200px;
+}
+
+.display-computer {
+  border: 5px solid green;
+  width: 200px;
+  height: 200px;
+}
+
+.display-result {
+  border: 5px solid green;
+  width: 300px;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+#player-choice {
+  font-size: 6em;
+}
+
+#computer-choice {
+  font-size: 6em;
+}
