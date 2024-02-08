@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container button {
+  font-size: 4em;
+  width: 100px;
+  height: 100px;
+}
