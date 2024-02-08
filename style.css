@@ -26,11 +26,18 @@ button {
   background-color: rgb(94, 0, 0);
   color: white;
   margin: 15px;
+  border-color: black;
   border-radius: 15px;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+button:active {
+  border-style: inset;
+  background-color: rgb(70, 3, 3);
+  color: grey;
 }
 
 .display-box {
