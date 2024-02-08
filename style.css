@@ -5,8 +5,13 @@
 }
 
 body {
-
+  background-color:rgb(5, 5, 68);
+  color: white;
   text-align: center;
+}
+
+.title {
+  padding: 1em;
 }
 
 .container {
@@ -14,9 +19,12 @@ body {
 }
 
 .container button {
-  font-size: 4em;
-  width: 100px;
-  height: 100px;
+  font-size: 100px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  background-color: rgb(94, 0, 0);
+  color: white;
 }
 
 .display-box {
@@ -32,26 +40,27 @@ body {
 .display-player {
   border: 5px solid green;
   width: 200px;
-  height: 200px;
+  padding: 1em;
 }
 
 .display-computer {
   border: 5px solid green;
   width: 200px;
-  height: 200px;
+  padding: 1em;
 }
 
 .result {
   border: 5px solid green;
   width: 300px;
-  padding: 1em;
+  padding: 2em;
+  font-size: 1.5em;
   margin: 1em auto;
 }
 
 #player-choice {
-  font-size: 6em;
+  font-size: 100px;
 }
 
 #computer-choice {
-  font-size: 6em;
+  font-size: 100px;
 }
