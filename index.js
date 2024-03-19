@@ -1,14 +1,5 @@
 // Button Functions
 const btnContainer = document.querySelector('.btn-container');
-const display = document.querySelector('.display-container');
-const score = document.querySelector('.score');
-
-// Display Divs and text content
-// const playerChoice = document.querySelector('#player-choice');
-// const computerChoice = document.querySelector('#computer-choice');
-// const result = document.querySelector('.result');
-// const playerScore = document.querySelector('.player-score');
-// const computerScore = document.querySelector('.computer-score');
 
 // Variables and arrays
 const choices = ["rock", "paper", "scissors"];
@@ -37,83 +28,37 @@ btnContainer.addEventListener('click', (e) => {
 });
 
 let playRound = (playerSelection, computerSelection) => {
-  if ( playerSelection === computerSelection ) {
-    result.textContent = "It's a tie!";
-  } else if (
+  if (
     ( playerSelection === "rock" && computerSelection === "scissors" ) ||
     ( playerSelection === "scissors" && computerSelection === "paper") ||
     ( playerSelection === "paper" && computerSelection === "rock")
   ) {
-    result.textContent = "Player Wins!";
     win++;
-  } else {
-    result.textContent = "Computer Wins!";
+  } else if (
+    ( playerSelection === "rock" && computerSelection === "paper" ) ||
+    ( playerSelection === "scissors" && computerSelection === "rock") ||
+    ( playerSelection === "paper" && computerSelection === "scissors")
+  ) {
     lose++;
   }
   displayResult(playerSelection, computerSelection);
 }
 
 let displayResult = (playerSelection, computerSelection) => {
-  switch ()
+  const displayPlayer = document.querySelector('#display-player');
+  const displayComputer = document.querySelector('#display-computer');
+
+  displayPlayer.textContent = `Player chose ${playerSelection}`;
+  displayComputer.textContent = `Computer chose ${computerSelection}`;
 }
 
-// rockBtn.addEventListener('click', () => {
-//   playerChoice.textContent = "rock";
-//   playerSelection = "rock";
-//   playRound();
-// });
+// let displayScore = () => {
+//   const score = document.querySelector('.score');
 
-// paperBtn.addEventListener('click', () => {
-//   playerChoice.textContent = "paper";
-//   playerSelection = "paper";
-//   playRound();
-// });
+//   score.addEventListener('showscore', function (e) {
+//     console.log(e.target.id);
+//   });
 
-// scissorsBtn.addEventListener('click', () => {
-//   playerChoice.textContent = "scissors";
-//   playerSelection = "scissors";
-//   playRound();
-// });
-
-// After you press the button, you should start the game
-
-// const playRound = (playerSelection, computerSelection) => {
-  
-// }
-
-// let checkWinner = (playerSelection, computerSelection) => {
-//   if ( playerSelection === computerSelection ) {
-//     result.textContent = "It's a tie!";
-//   } else if (
-//     ( playerSelection === "rock" && computerSelection === "scissors" ) ||
-//     ( playerSelection === "scissors" && computerSelection === "paper") ||
-//     ( playerSelection === "paper" && computerSelection === "rock")
-//   ) {
-//     result.textContent = "Player Wins!";
-//     win++;
-//   } else {
-//     result.textContent = "Computer Wins!";
-//     lose++;
-//   }
-//   displayScore();
-// }
-
-// const displayScore = () => {
-//   playerScore.textContent = `Player: ${win}`;
-//   computerScore.textContent = `Computer: ${lose}`;
-// }
-
-// const resetGame = () => {
-//   if ( win === 5 ) {
-//     alert('You Win! Congratulations!');
-//   } else if ( lose === 5 ) {
-//     alert('Computer Wins! Game Over!');
-//   }
-//   win = 0;
-//   lose = 0;
-//   playerScore.textContent = `Player: ${win}`;
-//   computerScore.textContent = `Player: ${lose}`;
-//   playerChoice.textContent = "";
-//   computerChoice.textContent = "";
-//   result.textContent = "";
+//   let scoreEvent = new Event('showscore', { bubbles: true });
+//   score.dispatchEvent(scoreEvent);
 // }
