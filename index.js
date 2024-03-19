@@ -1,7 +1,9 @@
 // Button Functions
-const rockBtn = document.querySelector('#rock-btn');
-const paperBtn = document.querySelector('#paper-btn');
-const scissorsBtn = document.querySelector('#scissors-btn');
+const btnContainer = document.querySelector('.btn-container');
+
+// const rockBtn = document.querySelector('#rock-btn');
+// const paperBtn = document.querySelector('#paper-btn');
+// const scissorsBtn = document.querySelector('#scissors-btn');
 
 // Display Divs and text content
 const playerChoice = document.querySelector('#player-choice');
@@ -11,30 +13,47 @@ const playerScore = document.querySelector('.player-score');
 const computerScore = document.querySelector('.computer-score');
 
 // Variables and arrays
-const choices = ["👊", "✋", "✌️"];
+const choices = ["rock", "paper", "scissors"];
 let playerSelection;
 let computerSelection;
 let win = 0;
 let lose = 0;
 
 // button event listeners
-rockBtn.addEventListener('click', () => {
-  playerChoice.textContent = "👊";
-  playerSelection = "👊";
+btnContainer.addEventListener('click', (e) => {
+  switch (e.target.id) {
+    case "rock-btn":
+      playerSelection = choices[0];
+      break;
+    case "paper-btn":
+      playerSelection = choices[1];
+      break;
+    case "scissors-btn":
+      playerSelection = choices[2];
+      break;
+    default:
+      break;
+  }
   playRound();
 });
 
-paperBtn.addEventListener('click', () => {
-  playerChoice.textContent = "✋";
-  playerSelection = "✋";
-  playRound();
-});
+// rockBtn.addEventListener('click', () => {
+//   playerChoice.textContent = "rock";
+//   playerSelection = "rock";
+//   playRound();
+// });
 
-scissorsBtn.addEventListener('click', () => {
-  playerChoice.textContent = "✌️";
-  playerSelection = "✌️";
-  playRound();
-});
+// paperBtn.addEventListener('click', () => {
+//   playerChoice.textContent = "paper";
+//   playerSelection = "paper";
+//   playRound();
+// });
+
+// scissorsBtn.addEventListener('click', () => {
+//   playerChoice.textContent = "scissors";
+//   playerSelection = "scissors";
+//   playRound();
+// });
 
 // After you press the button, you should start the game
 
@@ -50,9 +69,9 @@ let checkWinner = (playerSelection, computerSelection) => {
   if ( playerSelection === computerSelection ) {
     result.textContent = "It's a tie!";
   } else if (
-    ( playerSelection === "👊" && computerSelection === "✌️" ) ||
-    ( playerSelection === "✌️" && computerSelection === "✋") ||
-    ( playerSelection === "✋" && computerSelection === "👊")
+    ( playerSelection === "rock" && computerSelection === "scissors" ) ||
+    ( playerSelection === "scissors" && computerSelection === "paper") ||
+    ( playerSelection === "paper" && computerSelection === "rock")
   ) {
     result.textContent = "Player Wins!";
     win++;
