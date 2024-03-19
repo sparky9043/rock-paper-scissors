@@ -7,6 +7,12 @@ let playerSelection;
 let win = 0;
 let lose = 0;
 
+// Reference to displays
+const displayPlayer = document.querySelector('#display-player');
+const displayComputer = document.querySelector('#display-computer');
+const playerScore = document.querySelector('#player-score');
+const computerScore = document.querySelector('#computer-score');
+
 // button event listeners
 btnContainer.addEventListener('click', (e) => {
   switch (e.target.id) {
@@ -45,20 +51,30 @@ let playRound = (playerSelection, computerSelection) => {
 }
 
 let displayResult = (playerSelection, computerSelection) => {
-  const displayPlayer = document.querySelector('#display-player');
-  const displayComputer = document.querySelector('#display-computer');
-
   displayPlayer.textContent = `Player chose ${playerSelection}`;
   displayComputer.textContent = `Computer chose ${computerSelection}`;
+  displayScore();
 }
 
-// let displayScore = () => {
-//   const score = document.querySelector('.score');
+let displayScore = () => {
+  playerScore.textContent = win;
+  computerScore.textContent = lose;
 
-//   score.addEventListener('showscore', function (e) {
-//     console.log(e.target.id);
-//   });
+  if ( win === 5 || lose === 5) {
+    resetScore(win, lose);
+    win = 0;
+    lose = 0;
+  }
+}
 
-//   let scoreEvent = new Event('showscore', { bubbles: true });
-//   score.dispatchEvent(scoreEvent);
-// }
+let resetScore = (win, lose) => {
+  if ( win === 5 ) {
+    alert("Player Wins! Game Over!");
+  } else if ( lose === 5) {
+    alert("Computer Wins! Game Over!");
+  }
+  displayPlayer.textContent = '';
+  displayComputer.textContent = '';
+  playerScore.textContent = 0;
+  computerScore.textContent = 0;
+}
