@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Protest Guerrilla';
   letter-spacing: 2px;
+  font-size: 20px;
 }
 
 body {
@@ -19,16 +20,18 @@ body {
   margin: 2em auto;
   border-radius: 20px;
   padding: 1em;
+  line-height: 1.6em;
 }
 
 .title {
   padding: 1em;
+  font-size: 2em;
 }
 
 button {
-  font-size: 4.5em;
-  height: 100px;
-  width: 100px;
+  font-size: 7em;
+  height: 200px;
+  width: 200px;
   text-align: center;
   background-color: rgb(94, 0, 0);
   color: yellow;
