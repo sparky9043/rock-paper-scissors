@@ -61,12 +61,6 @@ let checkWinner = (humanSelection, computerSelection) => {
     lose++;
   }
   displayScore();
-  
-  if ( win === 5 || lose === 5) {
-    setTimeout( () => {
-      resetGame();
-    }, 1);
-  }
 }
 
 const displayScore = () => {
