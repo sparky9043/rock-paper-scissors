@@ -25,9 +25,9 @@ body {
 }
 
 button {
-  font-size: 100px;
-  height: 150px;
-  width: 150px;
+  font-size: 4.5em;
+  height: 100px;
+  width: 100px;
   text-align: center;
   background-color: rgb(94, 0, 0);
   color: yellow;
@@ -46,7 +46,7 @@ button:active {
   color: grey;
 }
 
-.display-box {
+.display {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
@@ -56,46 +56,10 @@ button:active {
   padding-top: 1em;
 }
 
-.display-player {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(61, 39, 139, 0.877);
-  border-radius: 10px;
-  padding: 1em;
-}
-
-.display-computer {
-  width: 200px;
-  padding: 1em;
-  background-color: rgba(61, 39, 139, 0.877);
-  border-radius: 10px;
-}
-
-.result {
-  width: 300px;
-  height: 100px;
-  text-align: center;
-  padding: 1em;
-  font-size: 1.5em;
-  margin: 1em auto;
-  background-color: rgba(61, 39, 139, 0.877);
-  border-radius: 20px;
-}
-
-#player-choice {
-  font-size: 100px;
+#player-score {
   color: yellow;
 }
 
-#computer-choice {
-  font-size: 100px;
+#computer-score {
   color: yellow;
-}
-
-.player-score {
-  font-size: 1.5em;
-}
-
-.computer-score {
-  font-size: 1.5em;
 }
