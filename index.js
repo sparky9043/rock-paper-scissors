@@ -1,5 +1,7 @@
 // Button Functions
 const btnContainer = document.querySelector('.btn-container');
+const display = document.querySelector('.display-container');
+const score = document.querySelector('.score');
 
 // Display Divs and text content
 // const playerChoice = document.querySelector('#player-choice');
@@ -33,6 +35,27 @@ btnContainer.addEventListener('click', (e) => {
   let computerSelection = choices[random];
   playRound(playerSelection, computerSelection);
 });
+
+let playRound = (playerSelection, computerSelection) => {
+  if ( playerSelection === computerSelection ) {
+    result.textContent = "It's a tie!";
+  } else if (
+    ( playerSelection === "rock" && computerSelection === "scissors" ) ||
+    ( playerSelection === "scissors" && computerSelection === "paper") ||
+    ( playerSelection === "paper" && computerSelection === "rock")
+  ) {
+    result.textContent = "Player Wins!";
+    win++;
+  } else {
+    result.textContent = "Computer Wins!";
+    lose++;
+  }
+  displayResult(playerSelection, computerSelection);
+}
+
+let displayResult = (playerSelection, computerSelection) => {
+  switch ()
+}
 
 // rockBtn.addEventListener('click', () => {
 //   playerChoice.textContent = "rock";
